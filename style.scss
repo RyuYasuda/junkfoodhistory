@@ -1,0 +1,277 @@
+@import './AnimationLibrary/Animations/_drip-animation';
+
+body{
+    font-family: 'Darumadrop One', 'RocknRoll One', sans-serif, cursive;
+}
+
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: orange;
+    box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.5);
+    border-bottom: #55555569 1px solid;
+
+    &__inner{
+        margin: 0 auto;
+        max-width: 1080px;
+        height: 100%;
+        display:  flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__input-container{
+        position: relative;
+        display: inline-block;
+
+        & .fas {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+    &__input{
+        outline: none;
+        border-radius: 40px;
+        width: 250px;
+        padding: 10px 10px 10px 30px;
+        box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+        // background: url(images/ebi_fried.png);
+    }
+    &__title{
+        -webkit-text-stroke: 3px #555;
+        text-shadow: 4px 4px 0 #e5c046;
+        color: rgba(0 0 0 / 0);
+        font-size: 50px;
+        font-weight: 400;
+
+
+    }
+    &__ul{
+        display: flex;
+    }
+    &__item{
+        list-style: none;
+        margin:10px 0 0 20px;
+
+        & > a {
+            font-size: 20px;
+            color: #555555c5;
+
+            &:hover{
+                color: #555;
+            }
+        }
+
+        &:last-child{
+            margin-left: 30px;
+            & > a{
+                font-size: 30px;
+                border:3px solid #555;
+                padding: 5px 10px;
+                transition: all 0.3s;
+                border-radius: 50px;
+
+                &:hover{
+                    background-color: #e5c04636;
+                    color: #525151;
+                }
+            }
+        }
+    }
+}
+
+#container{
+    background-color: #6278622a;
+}
+
+.main-visual{
+    width: 100%;
+    height: 450px;
+    background-color: white;
+    position: relative;
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    z-index: 2;
+
+    &__inner{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__download{
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 5;
+        background-color: #52515193;
+        padding: 3px 20px 0 15px ;
+        border-radius: 50px;
+        transition: all 0.3s;
+
+        & > .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48;
+            color: white;
+            font-size: 45px;
+            vertical-align: middle;
+            padding-bottom: 10px;
+            cursor: pointer;
+          }
+          
+
+        & > a{
+            font-weight: bold;
+            color: white;
+            font-size: 35px;
+
+            &:hover{
+                color: rgba(233, 231, 231, 0.993);
+            }
+        }
+
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #f57931c2;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img{
+        width: 33.3333%;
+    }
+}
+
+.About{
+    max-width: 1080px;
+    margin:0 auto;
+
+    &__inner{
+        display: flex;
+    }
+
+    &__example-1{
+        width: 50%;
+        height: auto;
+        background-color: beige;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        padding: 20px;
+        border-radius: 13px;
+        margin-right: 15px;
+        opacity: 0;
+    }
+    &__example-2{
+        position: relative;
+        width: 50%;
+        height: auto;
+        background-color: beige;
+        margin-left: 15px;
+        border-radius: 13px;
+        overflow: hidden;
+        z-index: -20;
+        opacity: 0;
+    }
+
+    &__header{
+        position: relative;
+        width: 100%;
+        height: 45px;
+        background-color: rgba(255, 166, 0, 0.685);
+    }
+
+    &__user-name{
+        padding: 10px 0 ;
+        font-weight: lighter;
+
+        & > .material-symbols-outlined{
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48;
+            color: black;
+            font-size: 30px;
+            vertical-align: middle;
+            padding-bottom: 10px;
+            cursor: pointer;
+          }
+    }
+
+    &__posts{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+}
+
+    &__post{
+        flex-basis: 30%;
+        height: 120px;
+        padding: 5px;
+        border-radius: 18px;
+    }
+
+.detail-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.profile-img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+
+    &.icon{
+        position: absolute;
+        margin: 5px 0 5px 10px;
+        height: 35px;
+        width: 35px;
+    }
+}
+
+
+// a タグ
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+// drip-animation
+.drip {
+    @include drip-animation();
+  }
+  
+  .blue{
+    height: 1000px;
+  }
+// サブタイトル
+
+.sub__title{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.main__title{
+    text-align: center;
+}
+
+// Download icon
